@@ -38,7 +38,7 @@ nav .circle{
 .song-img{
     
     width: 240px;
-    border-radius: 50%;
+    border-radius: 100%;
     border:  58px solid #fff;
     box-shadow: 0 5px 10px rgba(255,26,26,0.20);
  }
