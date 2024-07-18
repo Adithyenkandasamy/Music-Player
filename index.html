@@ -28,7 +28,7 @@
         <input type="range" value="0" id="progress">
         <div class="controls">
           <div><i class="fa-solid fa-backward" style="color: #e4d3a1;"></i></div>
-          <div oneclick="playpause()"><i class="fa-solid fa-play " id="ctrlIcon" style= "color: #9a9990;"></i></div> 
+          <div onclick="playpause()"><i class="fa-solid fa-play " id="ctrlIcon" style= "color: #9a9990;"></i></div> 
           <div><i class="fa-solid fa-forward "style="color: #e4d3a1;"></i></div> 
         </div>
         
@@ -46,15 +46,15 @@
         
     }
     function playpause(){
-        if(ctrlIcon.classlist.contains("fa-pause")){
+        if(ctrlIcon.classList.contains("fa-pause")){
             song.pause();
-            crtlIcon.classlist.remove("fa-pause");
-            crtlIcon.classlist.add("fa-play");
+            ctrlIcon.classList.remove("fa-pause");
+            ctrlIcon.classList.add("fa-play");
         }
         else{
             song.play();
-            crtlIcon.classlist.add("fa-pause");
-            crtlIcon.classlist.remove("fa-play");
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
         }
     }
  </script>  
