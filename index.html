@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+ <div class="container">
+    <div class="music-player">
+        <nav>
+            <div class="circle">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="circle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <img src="img.png" alt="asakoda img"class="song-img">
+        <h1>Aasa kooda</h1>    
+        <p>Sai Abhyankkar, Preity Mukundhan</p>
+        <audio controls id="song">
+            <source src="Aasa kooda.mp3" type="audio/mp3">
+        </audio>
+        <input type="range" value="0" id="progress">
+        <div class="controls">
+          <div><i class="fa-solid fa-backward" style="color: #e4d3a1;"></i></div>
+          <div oneclick="playpause()"><i class="fa-solid fa-play " id="ctrlIcon" style= "color: #9a9990;"></i></div> 
+          <div><i class="fa-solid fa-forward "style="color: #e4d3a1;"></i></div> 
+        </div>
+        
+    </div>
+
+ </div> 
+ <script>
+    let progress = document.getElementById("progress");
+    let song = document.getElementById("song");
+    let ctrlIcon = document.getElementById("ctrlIcon");
+
+    song.onloadedmetadata = function(){
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+        
+    }
+    function playpause(){
+        if(ctrlIcon.classlist.contains("fa-pause")){
+            song.pause();
+            crtlIcon.classlist.remove("fa-pause");
+            crtlIcon.classlist.add("fa-play");
+        }
+        else{
+            song.play();
+            crtlIcon.classlist.add("fa-pause");
+            crtlIcon.classlist.remove("fa-play");
+        }
+    }
+ </script>  
+</body>
+</html>
+
