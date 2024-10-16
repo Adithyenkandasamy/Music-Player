@@ -57,7 +57,7 @@ nav .circle {
     box-shadow: 0 5px 10px rgba(255, 26, 26, 0.2);
     margin: 20px auto;
     opacity: 0.8; /* Image transparency */
-    animation: blink 2s infinite; /* Blink effect */
+    animation: blink 1s infinite; /* Blink effect */
 }
 
 /* Animation for blinking effect */
