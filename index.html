@@ -70,33 +70,34 @@
         };
 
         // Play or Pause song
-        function playPause() {
-            if (ctrlIcon.classList.contains("fa-pause")) {
-                song.pause();
-                ctrlIcon.classList.remove("fa-pause");
-                ctrlIcon.classList.add("fa-play");
-            } else {
-                song.play();
-                ctrlIcon.classList.add("fa-pause");
-                ctrlIcon.classList.remove("fa-play");
-            }
-        }
-
-        // Next Song
         function nextSong() {
-            currentSongIndex = (currentSongIndex + 1) % songs.length;
-            loadSong(currentSongIndex);
-            playPause();
-            song.play();
-        }
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadSong(currentSongIndex);
+    song.play();
+    ctrlIcon.classList.add("fa-pause");
+    ctrlIcon.classList.remove("fa-play");
+}
 
-        // Previous Song
-        function prevSong() {
-            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-            loadSong(currentSongIndex);
-            playPause();
-            song.play();
-        }
+function prevSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadSong(currentSongIndex);
+    song.play();
+    ctrlIcon.classList.add("fa-pause");
+    ctrlIcon.classList.remove("fa-play");
+}
+
+function playPause() {
+    if (song.paused) {
+        song.play();
+        ctrlIcon.classList.add("fa-pause");
+        ctrlIcon.classList.remove("fa-play");
+    } else {
+        song.pause();
+        ctrlIcon.classList.remove("fa-pause");
+        ctrlIcon.classList.add("fa-play");
+    }
+}
+
 
         // Update the progress bar as the song plays
         if (song.play()) {
