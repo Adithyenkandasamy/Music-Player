@@ -20,12 +20,12 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
-            <img src="img.png" class="song-img" id="song-img">
+            <img src="./img/img1.jpg" class="song-img" id="song-img">
             <h1 id="song-title">Aasa Kooda</h1>
             <p id="song-artist">Artist</p>
 
             <audio id="song">
-                <source src="music1.mp3" type="audio/mpeg">
+                <source src="./music/music1.mp3" type="audio/mpeg">
             </audio>
             <input type="range" value="0" id="progress">
 
@@ -47,10 +47,10 @@
 
         // Array of songs
         let songs = [
-            { title: "Aasa Kooda", artist: "Artist 1", src: "music1.mp3", img: "img1.jpg" },
-            { title: "Mukkala Mukapala", artist: "Artist 2", src: "music2.mp3", img: "img2.png" },
-            { title: "Tum Tum", artist: "Artist 3", src: "music3.mp3", img: "img3.png" }
-            { title: "Arabic", artist: "Artist 3", src: "music4.mp3", img: "img4.png" }
+            { title: "Aasa Kooda", artist: "Artist 1", src: "./music/music1.mp3", img: "./img/img1.jpg" },
+            { title: "Mukkala Mukapala", artist: "Artist 2", src: "./music/music2.mp3", img: "./img/img2.png" },
+            { title: "Tum Tum", artist: "Artist 3", src: "./music/music3.mp3", img: "./img/img3.png" },
+            { title: "Arabic", artist: "Artist 3", src: "./music/music4.mp3", img: "./img/img4.png" }
         ];
 
         let currentSongIndex = 0;
